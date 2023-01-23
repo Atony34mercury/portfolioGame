@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} Welcome {% endblock %}
+
+{% block content %}
+    <div class="row" align="center">
+        <div class="col-12">
+            <div class="card text-bg-primary">
+              <div class="card-body">
+                  <h1 class="display-4">Meeting Planner</h1>
+              </div>
+            </div>
+            <img src="{% static '/website/unity-logo-dark.png'%}" width="100px">
+        </div>
+        <div class="col-6">
+            Here You can schedule meetings with your team
+        </div>
+        <div class="col-6">
+            There are {{num_meetings}} of meetings in the database
+        </div>
+        <div class="col">
+            <h2>Meetings</h2>
+            <ul>
+                {% for meeting in meetings %}
+                    <li>
+                        <a href="{% url 'detail' meeting.id %}">
+                            {{ meeting.title}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <a href="{% url 'rooms' %}">
+            See Room List
+        </a>
+    </div>
+
+{% endblock %}
