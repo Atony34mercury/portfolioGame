@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Portfolio</title>
+    <title>Unity WebGL Player | TestSoftSkin</title>
     <link rel="shortcut icon" href="{% static 'TemplateData/favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'TemplateData/style.css' %}">
-      <style>
+    <style>
         body {
           background-image: url('static/star-spiral.jpg');
           background-repeat: no-repeat;
@@ -29,7 +29,7 @@
       <div id="unity-footer">
 <!--        <div id="unity-webgl-logo"></div>-->
         <div id="unity-fullscreen-button"></div>
-<!--        <div id="unity-build-title">Portfolio</div>-->
+<!--        <div id="unity-build-title">TestSoftSkin</div>-->
       </div>
     </div>
     <script>
@@ -65,11 +65,11 @@
       }
 
       var buildUrl = "static/Build";
-      var loaderUrl = buildUrl + "/Downloads.loader.js";
+      var loaderUrl = buildUrl + "/GameBUild.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Downloads.data.gz",
-        frameworkUrl: buildUrl + "/Downloads.framework.js.gz",
-        codeUrl: buildUrl + "/Downloads.wasm.gz",
+        dataUrl: buildUrl + "/GameBUild.data",
+        frameworkUrl: buildUrl + "/GameBUild.framework.js",
+        codeUrl: buildUrl + "/GameBUild.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "TestSoftSkin",
